@@ -10,8 +10,3 @@ navbar:
       href: https://github.com/ggseg/ggseg.docs
       aria-label: GitHub
 
-reference:
-  - title: Build
-    desc: Build a pkgdown site with ggsegverse branding
-    contents:
-      - build_ggseg_docs

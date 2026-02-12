@@ -1,5 +1,5 @@
 Package: ggseg.docs
-Title: pkgdown Template and Utilities for the ggsegverse Ecosystem
+Title: pkgdown Template for the ggsegverse Ecosystem
 Version: 1.0.0
 Authors@R: c(
     person("Athanasia Mo", "Mowinckel",
@@ -9,17 +9,15 @@ Authors@R: c(
     )
 Description: Shared pkgdown template providing consistent branding across all
     ggsegverse packages. Includes the ggseg color palette, typography (Inter +
-    JetBrains Mono), dark-mode support, a custom footer linking back to the
-    ggsegverse website, and a build wrapper that enforces template settings.
+    JetBrains Mono), dark-mode support, and a custom footer linking back to the
+    ggsegverse website.
 License: MIT + file LICENSE
 URL: https://github.com/ggseg/ggseg.docs
 BugReports: https://github.com/ggseg/ggseg.docs/issues
 Imports:
-    pkgdown,
     yaml
 Suggests:
-    testthat (>= 3.0.0),
-    withr
+    testthat (>= 3.0.0)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
