@@ -1,13 +1,13 @@
 // ggseg.docs — shared ggsegverse pkgdown styling
 // Palette tokens (match _brand.yml)
-$ggseg-teal-dark:  #29393e;
-$ggseg-teal-light: #a8c5cb;
-$ggseg-plum:       #5e3c58;
-$ggseg-mauve:      #cec4cc;
-$ggseg-slate-900:  #1a2a2e;
-$ggseg-white:      #f2f0ef;
-$ggseg-success:    #478f76;
-$ggseg-danger:     #CD6689;
+$ggseg-teal-dark:  #29393e !default;
+$ggseg-teal-light: #a8c5cb !default;
+$ggseg-plum:       #5e3c58 !default;
+$ggseg-mauve:      #cec4cc !default;
+$ggseg-slate-900:  #1a2a2e !default;
+$ggseg-white:      #f2f0ef !default;
+$ggseg-success:    #478f76 !default;
+$ggseg-danger:     #CD6689 !default;
 
 // ── Dark-mode overrides ──
 [data-bs-theme="dark"] {
@@ -39,33 +39,69 @@ $ggseg-danger:     #CD6689;
   color: #c49abd;
 }
 
-// ── Navbar refinements ──
+// ── Navbar ──
 .navbar {
   border-bottom: 2px solid $ggseg-teal-light;
+  min-height: 40px;
+}
+
+.navbar > .container {
+  align-items: center;
 }
 
 .navbar-brand img {
   max-height: 36px;
 }
 
-// ── Footer ──
-.pkgdown-footer {
-  border-top: 2px solid $ggseg-teal-light;
+#ggsegverse-logo {
+  height: 36px;
+  float: left;
+  margin: 2px 12px 2px 0;
+}
 
-  a {
-    color: $ggseg-plum;
+.navbar-nav a:hover {
+  text-decoration: underline;
+}
 
-    &:hover {
-      color: $ggseg-teal-dark;
-    }
+img.logo {
+  width: 110px;
+}
+
+@media (min-width: 576px) {
+  .template-home .page-header {
+    min-height: 0;
   }
 }
 
-[data-bs-theme="dark"] .pkgdown-footer a {
-  color: $ggseg-mauve;
+// ── Footer (full-width breakout) ──
+.ggsegverse-footer {
+  background-color: $ggseg-teal-dark;
+  color: $ggseg-white;
+  font-size: 0.9rem;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  border-top: 2px solid $ggseg-teal-light;
 
-  &:hover {
+  a {
     color: $ggseg-teal-light;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline !important;
+      color: $ggseg-white;
+    }
+  }
+
+  .text-muted {
+    color: rgba($ggseg-white, 0.7) !important;
+  }
+
+  img {
+    max-width: 10vw;
   }
 }
 
@@ -86,11 +122,28 @@ h1, h2, h3, h4 {
   }
 }
 
-// ── Reference index cards ──
+// ── Reference index ──
 .section-description {
   color: $ggseg-plum;
 }
 
 [data-bs-theme="dark"] .section-description {
   color: $ggseg-mauve;
+}
+
+// ── Misc ──
+body {
+  word-wrap: break-word;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+main h1 img {
+  max-width: 120px;
+}
+
+.template-reference-index h3 {
+  font-size: 1.5rem;
 }
