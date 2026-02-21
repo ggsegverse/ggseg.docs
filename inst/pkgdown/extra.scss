@@ -8,13 +8,14 @@ $ggseg-slate-900:  #1a2a2e !default;
 $ggseg-white:      #f2f0ef !default;
 $ggseg-success:    #478f76 !default;
 $ggseg-danger:     #CD6689 !default;
+$ggseg-warning:    #e5a663 !default;
 
 // ── Dark-mode overrides ──
 [data-bs-theme="dark"] {
-  --bs-link-color-rgb: 123, 200, 204;
-  --bs-link-hover-color-rgb: 196, 154, 189;
-  --bs-code-color: #e0dedd;
-  --bs-body-color: #e0dedd;
+  --bs-link-color-rgb: 168, 197, 203;
+  --bs-link-hover-color-rgb: 206, 196, 204;
+  --bs-code-color: #f2f0ef;
+  --bs-body-color: #f2f0ef;
   --bs-border-color: #3a5055;
 }
 
@@ -23,20 +24,20 @@ $ggseg-danger:     #CD6689 !default;
 }
 
 [data-bs-theme="dark"] pre {
-  background-color: #263538;
+  background-color: $ggseg-teal-dark;
 }
 
 [data-bs-theme="dark"] code {
-  color: #e0dedd;
-  background-color: #263538;
+  color: #f2f0ef;
+  background-color: $ggseg-teal-dark;
 }
 
 [data-bs-theme="dark"] a {
-  color: #7bc8cc;
+  color: $ggseg-teal-light;
 }
 
 [data-bs-theme="dark"] a:hover {
-  color: #c49abd;
+  color: $ggseg-mauve;
 }
 
 // ── Navbar ──
@@ -105,6 +106,18 @@ img.logo {
   }
 }
 
+// ── Captions (figures & widgets) ──
+figcaption,
+.figure-caption,
+.htmlwidget-caption {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--bs-secondary-color);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
 // ── Code blocks ──
 pre {
   border: 1px solid $ggseg-teal-light;
@@ -114,6 +127,7 @@ pre {
 // ── Headings ──
 h1, h2, h3, h4 {
   color: $ggseg-teal-dark;
+  letter-spacing: 0.11em;
 }
 
 [data-bs-theme="dark"] {

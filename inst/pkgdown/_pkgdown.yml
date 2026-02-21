@@ -3,7 +3,7 @@ template:
   light-switch: true
   includes:
     before_title: >
-      <a href="https://ggseg.github.io">
+      <a href="https://ggsegverse.github.io">
         <img src="ggsegverse-logo.png" id="ggsegverse-logo" alt="ggsegverse">
       </a>
     after_body: >
@@ -22,12 +22,15 @@ template:
     secondary: "#5e3c58"
     success: "#478f76"
     danger: "#CD6689"
+    warning: "#e5a663"
     bg: "#f2f0ef"
     fg: "#1a2a2e"
     base_font:
       google: Inter
+    heading_font:
+      google: Montserrat
     code_font:
-      google: JetBrains Mono
+      google: Fira Code
     code-bg: "#cec4cc"
     code-color: "#1a2a2e"
     link-color: "#29393e"
