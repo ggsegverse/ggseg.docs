@@ -4,19 +4,8 @@ template:
   includes:
     before_title: >
       <a href="https://ggsegverse.github.io">
-        <img src="ggsegverse-logo.png" id="ggsegverse-logo" alt="ggsegverse">
+        <img src="https://raw.githubusercontent.com/ggsegverse/ggseg.docs/HEAD/inst/pkgdown/assets/ggsegverse-logo.png" id="ggsegverse-logo" alt="ggsegverse">
       </a>
-    after_body: >
-      <script>
-        document.addEventListener("DOMContentLoaded", function() {
-          var brand = document.querySelector(".navbar-brand");
-          if (!brand) return;
-          var root = brand.getAttribute("href").replace("index.html", "");
-          document.querySelectorAll(
-            '#ggsegverse-logo, .ggsegverse-footer img[alt="ggsegverse"]'
-          ).forEach(function(img) { img.src = root + "ggsegverse-logo.png"; });
-        });
-      </script>
   bslib:
     primary: "#29393e"
     secondary: "#5e3c58"
